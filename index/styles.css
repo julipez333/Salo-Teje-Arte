@@ -1,5 +1,6 @@
 <style>
    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
    .video-section {
   padding: 2rem;
   text-align: center;
@@ -15,7 +16,6 @@
   border-radius: 12px;
   overflow: hidden;
 }
-
 
    .hero {
   width: 100%;
