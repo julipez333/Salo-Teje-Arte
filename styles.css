@@ -73,16 +73,17 @@
   transform: scale(1.1);
 }
 
-   .caprasimo-regular {
-  font-family: "Caprasimo", serif;
-  font-weight: 400;
+.nunito-extra-bold-italic {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
   font-style: normal;
 }
 
-.andada-pro-regular {
-  font-family: "Andada Pro", serif;
+.raleway-extra-light {
+  font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: <weight>;
   font-style: normal;
 }
 
@@ -94,7 +95,7 @@
 }
 
 .logo-img {
-  height: 40px;   /* Ajusta el tamaño */
+  height: 60px;   /* Ajusta el tamaño */
   width: auto;
 }
    .cart-item {
@@ -191,9 +192,9 @@
     }
     .logo-icon svg { width:24px; height:24px; }
     .logo-name {
-      font-family:'Caprasimo', serif;
+      font-family:'Nunito', sans-serif;
       font-size:1.2rem; font-weight:700;
-      color: var(--purple);
+      color: #BC96E6;
     }
 
     /* Nav */
@@ -251,12 +252,12 @@
       padding: 3rem 2rem 2rem;
     }
     .page-hero h1 {
-      font-family: 'Caprasimo', serif;
+      font-family: 'Nunito', sans-serif;
       font-size: 2.8rem;
       color: var(--purple);
       margin-bottom: .5rem;
     }
-    .page-hero p { color: var(--text-sec); font-size:1rem; font-family: "Andada Pro", serif; }
+    .page-hero p { color: var(--text-sec); font-size:1rem; font-family: "Raleway", serif; }
 
     /* ─── SECTION ─── */
     .section {
@@ -657,7 +658,7 @@
     }
 
     .modal-title {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Nunito', serif;
       font-size: 1.9rem;
       color: #4c1d95;
       margin-bottom: 1.25rem;
@@ -769,10 +770,10 @@
     .logo-icon svg { width: 30px; height: 30px; }
 
     .logo-name {
-      font-family: 'Caprasimo', serif;
+      font-family: 'Nunito', sans-serif;
       font-size: 1.45rem;
       font-weight: 700;
-      color: var(--purple-main);
+      color: #BC96E6;
       letter-spacing: -.01em;
     }
 
@@ -811,7 +812,7 @@
     }
 
     .btn-cart:hover { background: var(--purple-soft); transform: scale(1.08); }
-    .btn-cart svg { color: var(--purple-main); }
+    .btn-cart svg { color: #BC96E6; }
 
     /* hamburger */
     .hamburger {
@@ -828,9 +829,8 @@
 
     /* ── HERO ── */
     .hero {
-      max-width: 1100px;
       margin: 4rem auto 3rem;
-      padding: 0 1.5rem;
+      
       text-align: center;
     }
 
@@ -864,7 +864,7 @@
     }
 
     .hero h1 {
-      font-family: 'Caprasimo', serif;
+      font-family: 'Nunito', sans-serif;
       font-size: clamp(2.5rem, 6vw, 3.75rem);
       color: var(--purple-main);
       line-height: 1.1;
@@ -872,7 +872,7 @@
     }
 
     .hero p {
-      font-family: "Andada Pro", serif;
+      font-family: "Raleway", serif;
       font-size: 1.15rem;
       color: var(--text-mid);
       max-width: 520px;
@@ -903,14 +903,14 @@
     }
 
     .section-title h2 {
-      font-family: 'Caprasimo', serif;
+      font-family: 'Nunito', sans-serif;
       font-size: clamp(1.75rem, 4vw, 2.5rem);
-      color: var(--purple-deep);
+      color: #BC96E6;
       display: inline-block;
       background: var(--white);
       padding: .6rem 2.5rem;
       border-radius: 999px;
-      border: 3px solid #ddd6fe;
+      border: 3px solid #BC96E6;
       box-shadow: var(--shadow-sm);
     }
 
@@ -924,16 +924,16 @@
       text-decoration: none;
       border-radius: var(--radius-lg);
       padding: 2.5rem 1.5rem;
-      border: 3px solid #ddd6fe;
+      border: 3px solid #BC96E6;
       box-shadow: var(--shadow-sm);
       text-align: center;
       transition: transform .25s, box-shadow .25s;
       animation: fadeUp .7s ease both;
     }
 
-    .cat-card:nth-child(1) { background: linear-gradient(145deg, #fef9c3, #fef08a); animation-delay: .1s; }
-    .cat-card:nth-child(2) { background: linear-gradient(145deg, #fef9c3, #fde68a); animation-delay: .2s; }
-    .cat-card:nth-child(3) { background: linear-gradient(145deg, #f0fdf4, #dcfce7); animation-delay: .3s; }
+    .cat-card:nth-child(1) { background: linear-gradient(145deg, #FFD166, #FFD166); animation-delay: .1s; }
+    .cat-card:nth-child(2) { background: linear-gradient(145deg, #FFD166, #FFD166); animation-delay: .2s; }
+    .cat-card:nth-child(3) { background: linear-gradient(145deg, #FFD166, #FFD166); animation-delay: .3s; }
 
     .cat-card:hover {
       transform: translateY(-6px) scale(1.02);
@@ -943,13 +943,13 @@
     .cat-icon { font-size: 3.5rem; margin-bottom: 1rem; line-height: 1; }
 
     .cat-card h3 {
-      font-family: 'Caprasimo', serif;
+      font-family: 'Nunito', serif;
       font-size: 1.4rem;
-      color: var(--purple-deep);
+      color: #BC96E6;
       margin-bottom: .4rem;
     }
 
-    .cat-card p { color: var(--text-mid); font-size: .95rem; font-family: "Andada Pro", serif; }
+    .cat-card p { color: var(--text-mid); font-size: .95rem; font-family: "Raleway", serif; }
 
     /* ── BANNER DESCUENTO ── */
     .banner-discount {
@@ -1023,7 +1023,7 @@
     }
 
     .footer-inner h3 {
-      font-family: 'Andada Pro', serif;
+      font-family: 'Raleway', serif;
       font-size: 1.2rem;
       margin-bottom: 1.25rem;
       opacity: .9;
@@ -1130,9 +1130,9 @@
     }
     .logo-icon svg { width: 30px; height: 30px; }
     .logo-name {
-      font-family: 'Caprasimo', serif;
+      font-family: 'Nunito', sans-serif;
       font-size: 1.45rem; font-weight: 700;
-      color: var(--purple-main); letter-spacing: -.01em;
+      color: #BC96E6; letter-spacing: -.01em;
     }
     nav { display: flex; align-items: center; gap: 2rem; }
     nav a {
@@ -1158,7 +1158,7 @@
       position: relative;
     }
     .btn-cart:hover { background: var(--purple-soft); transform: scale(1.08); }
-    .btn-cart svg { color: var(--purple-main); }
+    .btn-cart svg { color: #BC96E6; }
     .cart-badge {
       position: absolute; top: -4px; right: -4px;
       background: #ec4899; color: white; font-size: .65rem;
@@ -1194,11 +1194,11 @@
       padding: 0 1.5rem; text-align: center;
     }
     .page-header h1 {
-      font-family: 'Caprasimo', serif;
+      font-family: 'Nunito', sans-serif;
       font-size: clamp(2rem, 5vw, 3rem);
       color: var(--purple-deep); margin-bottom: .5rem;
     }
-    .page-header p { color: var(--text-mid); font-size: 1.05rem; font-family: "Andada Pro", serif; }
+    .page-header p { color: var(--text-mid); font-size: 1.05rem; font-family: "Raleway", serif; }
 
     /* ── SECTION LABEL ── */
     .section-label {
@@ -1206,7 +1206,7 @@
       margin-bottom: 1.5rem;
     }
     .section-label h2 {
-      font-family: 'Andada Pro', serif;
+      font-family: 'Raleway', serif;
       font-size: 1.75rem;
     }
     .section-label.descuento h2 { color: #db2777; }
@@ -1255,7 +1255,7 @@
     .product-body { padding: 1.1rem 1.1rem 1.2rem; }
     .product-body h3 {
       font-size: 1.05rem; font-weight: 700;
-      color: var(--text-dark); margin-bottom: .5rem; font-family: "Andada Pro", serif;
+      color: var(--text-dark); margin-bottom: .5rem; font-family: "Raleway", serif;
     }
     .price-row { display: flex; align-items: baseline; gap: .5rem; margin-bottom: .9rem; }
     .price-now {
@@ -1296,7 +1296,7 @@
     footer { background: var(--purple-nav); color: white; padding: 3rem 1.5rem 2rem; }
     .footer-inner { max-width: 1100px; margin: auto; text-align: center; }
     .footer-inner h3 {
-      font-family: 'Andada Pro', serif;
+      font-family: 'Raleway', serif;
       font-size: 1.2rem; margin-bottom: 1.25rem; opacity: .9;
     }
     .social-links { display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem; }
@@ -1515,5 +1515,10 @@
   .social-expanded {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+.cart-image{
+    width: 50px;
+    height: 5cap;
+    object-fit: contain;
 }
   </style>

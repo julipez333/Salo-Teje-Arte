@@ -6,7 +6,7 @@
   <title>Salo Teje Arte</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400..840;1,400..840&family=Caprasimo&display=swap" rel="stylesheet">  <link rel="stylesheet" href="styles.css" />
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">  <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -22,7 +22,7 @@
       <a href="#" class="logo">
         <div class="logo">
        
-                <img src="images/logo.png" alt="Logo" class="logo-img">
+                <img src="images/logo3.png" alt="Logo" class="logo-img">
           </svg>
         </div>
         <span class="logo-name">Salo Teje Arte</span>
@@ -103,7 +103,7 @@
 
         <div class="product-card">
           <div class="product-img">
-            <span class="emoji">👕</span>
+           <img src="images/sueter.png" alt="Sueter de Lana" class="product-image">
             <span class="discount-badge">-15%</span>
           </div>
           <div class="product-body">
@@ -139,7 +139,7 @@
 
         <div class="product-card">
           <div class="product-img">
-            <span class="emoji">🧢</span>
+            <img src="images/gorro.png" alt="Gorro de Invierno" class="product-image">
             <span class="discount-badge">-10%</span>
           </div>
           <div class="product-body">
@@ -157,7 +157,7 @@
 
         <div class="product-card">
           <div class="product-img">
-            <span class="emoji">🧤</span>
+            <img src="images/guantes.png" alt="Guantes Tejidos" class="product-image">
             <span class="discount-badge">-25%</span>
           </div>
           <div class="product-body">
@@ -186,7 +186,7 @@
 
         <div class="product-card">
           <div class="product-img">
-            <span class="emoji">👕</span>
+            <img src="images/sueter.png" alt="Sueter de Lana" class="product-image">
             <span class="discount-badge">-15%</span>
           </div>
           <div class="product-body">
@@ -204,7 +204,7 @@
 
         <div class="product-card">
           <div class="product-img">
-            <span class="emoji">🧥</span>
+            <img src="images/chaleco.png" alt="Chaleco Tejido" class="product-image">
           </div>
           <div class="product-body">
             <h3>Chaleco Tejido</h3>
@@ -220,7 +220,7 @@
 
         <div class="product-card">
           <div class="product-img">
-            <span class="emoji">🧣</span>
+            <img src="images/bufanda.png" alt="Bufanda Artesanal" class="product-image">
             <span class="discount-badge">-20%</span>
           </div>
           <div class="product-body">
@@ -238,7 +238,7 @@
 
         <div class="product-card">
           <div class="product-img">
-            <span class="emoji">🧢</span>
+            <img src="images/gorro.png" alt="Gorro de Invierno" class="product-image">
             <span class="discount-badge">-10%</span>
           </div>
           <div class="product-body">
@@ -256,7 +256,7 @@
 
         <div class="product-card">
           <div class="product-img">
-            <span class="emoji">👗</span>
+            <img src="images/poncho.png" alt="Poncho Multicolor" class="product-image">
           </div>
           <div class="product-body">
             <h3>Poncho Multicolor</h3>
@@ -272,7 +272,7 @@
 
         <div class="product-card">
           <div class="product-img">
-            <span class="emoji">🧤</span>
+            <img src="images/guantes.png" alt="Guantes Tejidos" class="product-image">
             <span class="discount-badge">-25%</span>
           </div>
           <div class="product-body">
@@ -331,13 +331,14 @@
 const fmt = n => '$' + n.toLocaleString('es-CO');
 
 // Productos prendas
+
 const allProducts = [
-  { id:1, name:'Suéter de Lana', emoji:'👕', price:72250 },
-  { id:2, name:'Bufanda Artesanal', emoji:'🧣', price:28000 },
-  { id:3, name:'Gorro de Invierno', emoji:'🧢', price:25200 },
-  { id:4, name:'Guantes Tejidos', emoji:'🧤', price:16500 },
-  { id:5, name:'Chaleco Tejido', emoji:'🧥', price:65000 },
-  { id:6, name:'Poncho Multicolor', emoji:'👗', price:95000 }
+  { id:1, name:'Suéter de Lana', image:'images/sueter.png', price:72250 },
+  { id:2, name:'Bufanda Artesanal', image:'images/bufanda.png', price:28000 },
+  { id:3, name:'Gorro de Invierno', image:'images/gorro.png', price:25200 },
+  { id:4, name:'Guantes Tejidos', image:'images/guantes.png', price:16500 },
+  { id:5, name:'Chaleco Tejido', image:'images/chaleco.png', price:65000 },
+  { id:6, name:'Poncho Multicolor', image:'images/poncho.png', price:95000 }
 ];
 
 // ── Cart state ──
@@ -369,7 +370,8 @@ function renderDrawer() {
   drawerTotal.textContent = fmt(totalPrice());
   drawerItems.innerHTML = items.map(i => `
     <div class="cart-item">
-      <span class="ci-emoji">${i.emoji}</span>
+      <span class="ci-emoji">
+        <img src="${i.image}" alt="${i.name}" class="cart-image"></span>
       <div class="ci-info">
         <div class="ci-name">${i.name}</div>
         <div class="ci-price">${fmt(i.price)}</div>
