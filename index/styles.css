@@ -931,9 +931,9 @@
       animation: fadeUp .7s ease both;
     }
 
-    .cat-card:nth-child(1) { background: linear-gradient(145deg, #FFD166, #FFD166); animation-delay: .1s; }
-    .cat-card:nth-child(2) { background: linear-gradient(145deg, #FFD166, #FFD166); animation-delay: .2s; }
-    .cat-card:nth-child(3) { background: linear-gradient(145deg, #FFD166, #FFD166); animation-delay: .3s; }
+    .cat-card:nth-child(1) { background: linear-gradient(145deg, #fbe198, #fbe198); animation-delay: .1s; }
+    .cat-card:nth-child(2) { background: linear-gradient(145deg, #fbe198, #fbe198); animation-delay: .2s; }
+    .cat-card:nth-child(3) { background: linear-gradient(145deg, #fbe198, #fbe198); animation-delay: .3s; }
 
     .cat-card:hover {
       transform: translateY(-6px) scale(1.02);
