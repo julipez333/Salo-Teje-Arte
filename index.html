@@ -68,19 +68,134 @@
 
   setTimeout(openPopup, 400);
 });
+/* =========================
+   CARRITO GLOBAL PERSISTENTE
+   ========================= */
+
+// Cargar carrito desde localStorage
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+// Guardar carrito
+function saveCart() {
+  localStorage.setItem('cart', JSON.stringify(cart));
+  updateCartUI();
+}
+
+// Agregar producto
+function addToCart(product) {
+  const existing = cart.find(item => item.id === product.id);
+
+  if (existing) {
+    existing.qty += 1;
+  } else {
+    cart.push({
+      ...product,
+      qty: 1
+    });
+  }
+
+  saveCart();
+  showToast(`${product.name} agregado al carrito`);
+}
+
+// Cambiar cantidad
+function changeQty(id, delta) {
+  const item = cart.find(p => p.id === id);
+
+  if (!item) return;
+
+  item.qty += delta;
+
+  if (item.qty <= 0) {
+    cart = cart.filter(p => p.id !== id);
+  }
+
+  saveCart();
+}
+
+// Actualizar interfaz
+function updateCartUI() {
+  const container = document.getElementById('cartItems');
+  const badge = document.getElementById('cartBadge');
+  const totalEl = document.getElementById('cartTotal');
+
+  if (!container) return;
+
+  // Badge
+  const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+
+  badge.textContent = totalQty;
+  badge.classList.toggle('show', totalQty > 0);
+
+  // Vacío
+  if (cart.length === 0) {
+    container.innerHTML = `
+      <div class="cart-empty">
+        <span>🧶</span>
+        Tu carrito está vacío
+      </div>
+    `;
+    totalEl.textContent = '$0';
+    return;
+  }
+
+  // Items
+  container.innerHTML = cart.map(item => `
+    <div class="cart-item">
+      <div class="cart-item-left">
+        <img src="${item.image}" class="cart-image" alt="${item.name}">
+        <div>
+          <div class="cart-name">${item.name}</div>
+          <div class="cart-price">$${item.price.toLocaleString('es-CO')}</div>
+        </div>
+      </div>
+
+      <div class="cart-qty">
+        <button onclick="changeQty('${item.id}', -1)">−</button>
+        <span>${item.qty}</span>
+        <button onclick="changeQty('${item.id}', 1)">+</button>
+      </div>
+    </div>
+  `).join('');
+
+  // Total
+  const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+  totalEl.textContent = '$' + total.toLocaleString('es-CO');
+}
+
+// Toast
+function showToast(message) {
+  const toast = document.getElementById('toast');
+  if (!toast) return;
+
+  toast.textContent = message;
+  toast.classList.add('show');
+
+  clearTimeout(window.toastTimeout);
+
+  window.toastTimeout = setTimeout(() => {
+    toast.classList.remove('show');
+  }, 2500);
+}
+
+// Inicializar al cargar la página
+document.addEventListener('DOMContentLoaded', updateCartUI);
   </script>
 
   <!-- ═══ HEADER ═══ -->
   <header>
     <div class="header-inner">
-      <a href="#" class="logo">
-        <div class="logo">
-       
-                <img src="images/logo3.png" alt="Logo" class="logo-img">
-          </svg>
-        </div>
-        <span class="logo-name">Salo Teje Arte</span>
-      </a>
+<a href="index.html" class="logo">
+
+    <img src="images/logo3.png"
+         alt="Salo Teje Arte"
+         class="logo-img">
+
+    <span class="logo-name">
+        Salo Teje Arte
+    </span>
+
+</a>
 
       <nav id="main-nav">
         <a href="index.html">Inicio</a>
@@ -107,7 +222,17 @@
   <!-- ═══ HERO ═══ -->
   <main>
 <section class="hero">
-  <img src="images/banner3.png" alt="Bienvenidos Salo Teje Arte" class="hero-img">
+
+    <video class="hero-video"
+           autoplay
+           muted
+           loop
+           playsinline>
+
+        <source src="videos/video.mp4" type="video/mp4">
+
+    </video>
+
 </section>
 
     <!-- ═══ CATEGORÍAS ═══ -->
@@ -116,21 +241,21 @@
         <h2>Categorías</h2>
       </div>
       <div class="cats-grid">
-        <a href="#" class="cat-card">
+        <a href="prendas.html" class="cat-card">
           <div class="cat-icon">
             <img src="images/blusa.png" alt="Camisas" class="cat-image">
           </div>
           <h3>Prendas</h3>
           <p>Ropa tejida con estilo</p>
         </a>
-        <a href="#" class="cat-card">
+        <a href="accesorios.html" class="cat-card">
           <div class="cat-icon">
             <img src="images/bolso1.png" alt="Bolsos" class="cat-image">
           </div>
           <h3>Accesorios</h3>
           <p>Complementos únicos</p>
         </a>
-        <a href="#" class="cat-card">
+        <a href="amigurumis.html" class="cat-card">
           <div class="cat-icon">
             <img src="images/amigurumi.png" alt="Amigurumis" class="cat-image">
           </div>
