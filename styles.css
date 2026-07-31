@@ -1493,8 +1493,9 @@
 .social-btn {
   padding: 1rem;
   border-radius: 8px;
+      border: 3px solid #BC96E6;
   text-decoration: none;
-  color: white;
+  color: #7c3aed;
   font-weight: 600;
   transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
@@ -1507,10 +1508,10 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.social-btn.facebook { background: #1877f2; }
-.social-btn.instagram { background: #e1306c; }
-.social-btn.tiktok { background: #000000; }
-.social-btn.whatsapp { background: #25d366; }
+.social-btn.facebook { background: #fbe198; }
+.social-btn.instagram { background: #fbe198; }
+.social-btn.tiktok { background: #fbe198; }
+.social-btn.whatsapp { background: #fbe198; }
 
 .form-section {
   background: white;
