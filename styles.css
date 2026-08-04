@@ -1614,4 +1614,237 @@
     height: 5cap;
     object-fit: contain;
 }
+/*==============================
+NOSOTROS
+===============================*/
+
+.about-banner{
+
+    width:100%;
+
+    padding:80px 20px;
+
+    text-align:center;
+
+    background:linear-gradient(135deg,);
+
+    color:#7b4acb;
+
+}
+
+.about-banner h1{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+}
+
+.about-banner p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    font-size:1.2rem;
+
+}
+
+/*==============================*/
+
+.about-company{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:70px auto;
+
+    display:grid;
+
+    grid-template-columns:400px 1fr;
+
+    gap:50px;
+
+    align-items:center;
+
+}
+
+.about-image img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+
+}
+
+.about-text h2{
+
+    color:#7b4acb;
+
+    margin-bottom:20px;
+
+}
+
+.about-text p{
+
+    text-align:justify;
+
+    line-height:1.8;
+
+}
+
+/*==============================*/
+
+.mission-vision{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:70px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+.card-about{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    border:2px solid #d8b8ff;
+
+}
+
+.card-about h2{
+
+    color:#7b4acb;
+
+    margin-bottom:20px;
+
+}
+
+/*==============================*/
+
+.values{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:70px auto;
+
+    text-align:center;
+
+}
+
+.values h2{
+
+    color:#7b4acb;
+
+    margin-bottom:40px;
+
+}
+
+.values-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.value-card{
+
+    background:#fff8ea;
+
+    border:2px solid #d7b6ff;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    transition:.3s;
+
+}
+
+.value-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.value-card h3{
+
+    margin:15px 0;
+
+    color:#7b4acb;
+
+}
+
+@media(max-width:900px){
+
+.about-company{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.about-text{
+
+text-align:center;
+
+}
+
+.about-text p{
+
+text-align:justify;
+
+}
+
+.mission-vision{
+
+grid-template-columns:1fr;
+
+}
+
+.values-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:600px){
+
+.about-banner h1{
+
+font-size:2rem;
+
+}
+
+.values-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
   </style>
